@@ -8,7 +8,11 @@ Sweeps a $(B, v)$ grid for a **non-Hermitian** superlattice tight-binding model 
 
 Uses parallelization of the program on an HPC cluster using slurm  
 
-The output file looks like figure.png
+The output file looks like <p align="center">
+  <img src="figure.png" alt="Figure 1" width="100%">
+  <br><em>Figure 1: Caption text…</em>
+</p>
+
 
 ## Run locally
 ```bash
