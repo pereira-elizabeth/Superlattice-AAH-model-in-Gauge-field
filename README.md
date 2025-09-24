@@ -11,4 +11,5 @@ Uses parallelization of the program on an HPC cluster using slurm
 ## Run locally
 ```bash
 pip install -r requirements.txt
-python array_parallel.py 0
+sbatch slurm/job_array.ssh
+
