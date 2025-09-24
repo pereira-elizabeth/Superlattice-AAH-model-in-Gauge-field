@@ -8,6 +8,8 @@ Sweeps a $(B, v)$ grid for a **non-Hermitian** superlattice tight-binding model 
 
 Uses parallelization of the program on an HPC cluster using slurm  
 
+The output file looks like figure.png
+
 ## Run locally
 ```bash
 pip install -r requirements.txt
