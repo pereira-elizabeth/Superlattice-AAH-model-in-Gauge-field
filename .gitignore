@@ -205,3 +205,17 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project-specific (HPC runs)
+logs/
+results/
+
+# SLURM logs if written to CWD
+*.out
+*.err
+
+# Generated data tables
+real_odd_parallel_array_*.dat
+imag_even_parallel_array_ALL*.dat
+grid_ALL_*.dat
+
