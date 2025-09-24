@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=nonherm_grid
+#SBATCH --array=0-99     #number of tasks is 100 total
+#SBATCH --time=07:00:00
+#SBATCH --mem=4G
+#SBATCH --ntasks=1
+#SBATCH --output=logs/%x_%A_%a.out
+#SBATCH --error=logs/%x_%A_%a.err
+#SBATCH --mail-user=YOUR@EMAIL   #enter your email id
+#SBATCH --mail-type=END,FAIL
+set -euo pipefail
+module load scicomp-python-env
+mkdir -p logs results
+python array_parallel.py "$SLURM_ARRAY_TASK_ID"
