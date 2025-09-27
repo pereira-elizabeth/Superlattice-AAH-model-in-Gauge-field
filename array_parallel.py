@@ -14,7 +14,8 @@ total_tasks = int(os.environ.get("SLURM_ARRAY_TASK_COUNT", "1"))
 job_id = os.environ.get("SLURM_JOB_ID", "local")
 
 # --- model params ---
-cell_size = 3           # 3 or 4
+W = 3 # the width parameter
+cell_size = W       # 3 or 4
 extra_sites = True
 N_cells = 50
 Nt = N_cells * (cell_size**2)
