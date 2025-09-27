@@ -91,7 +91,7 @@ def ipr(vl1, vl2):
     return np.sum(np.abs(overlaps) ** 2, axis=0)
 
 # --- build H (non-Hermitian via imaginary onsite) ---
-def eigsys(v, N_, t, B, Nl):
+def eigsys(X,Y,v, N_, t, B, Nl):
     H = np.zeros((Nl, Nl), dtype=np.complex128)
 
     for i, (x, y) in enumerate(zip(X, Y)):
@@ -129,7 +129,7 @@ def eigsys(v, N_, t, B, Nl):
 
 # --- metric ---
 def compute_percentage(B, v, cell_size, t, Nl, window=cell_size):
-    H = eigsys(v, cell_size, t, B, Nl)
+    H = eigsys(X,Y,v, cell_size, t, B, Nl)
     # non-Hermitian eigensystem
     w, VL, VR = sla.eig(H, left=True, right=True)
     idx = np.argsort(w.real)
