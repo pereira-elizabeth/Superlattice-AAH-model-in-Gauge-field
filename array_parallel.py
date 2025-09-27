@@ -24,7 +24,7 @@ alpha = (np.sqrt(5.0) - 1.0) / 2.0
 t = 1.0
 lm = 1                  # nn hop
 
-X, Y, custom_range, Nl = make_coordinates(Nt, cell_size)
+X, Y, custom_range, Nl = make_coordinates(Nt, cell_size, N_cells)
 
 # --- parameter grids ---
 B_vals = np.linspace(0.0025, 0.025, 100)
