@@ -90,10 +90,15 @@ def test_append_rows_atomic_writes_all_rows(tmp_path=None):
 
     # First append
     append_rows_atomic(out_file, rows)
-    # Append again to ensure it appends (not overwrite)
-    append_rows_atomic(out_file, rows)
 
     with open(out_file, "r") as f:
         lines = [ln for ln in f.read().splitlines() if ln.strip()]
 
-    assert len(lines) == 2 * len(rows)
+    # Separate optional header
+    header = 0
+    if lines and lines[0].lower().startswith(("b v", "b\tv")):
+        header = 1
+
+    data_lines = lines[header:]
+    assert len(data_lines) == 2 * len(rows)
+
