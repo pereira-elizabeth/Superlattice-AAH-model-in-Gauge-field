@@ -19,7 +19,7 @@ def orthomatrix(vl1, vl2, Nl):
             M[i, j] = np.dot(np.conj(vl1[:, i]), vl2[:, j])
     return M
 
-def newbiorth1(vl1, vl2):
+def newbiorth1(vl1, vl2,Nl):
     M = orthomatrix(vl1, vl2, Nl)
     P, L, U = sla.lu(M)
     L1 = P @ L
