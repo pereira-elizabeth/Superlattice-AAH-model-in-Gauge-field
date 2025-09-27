@@ -1,4 +1,4 @@
-# Superlattice AAH — Non-Hermitian Grid (B × v)
+# Superlattice AAH — Non-Hermitian $(B_{micro}\times v_{I}/\gamma)$ Grid 
 
 This repository contains a **non-Hermitian superlattice Aubry–André–Harper (AAH) model** implemented on a 1D multimodal chain.  
 It demonstrates Hamiltonian construction, non-Hermitian diagonalization, and HPC-scale parameter sweeps.
