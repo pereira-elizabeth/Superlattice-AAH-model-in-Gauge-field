@@ -24,7 +24,7 @@ def ipr(vl1, vl2):
     return np.sum(np.abs(overlaps) ** 2, axis=0)
 
 # --- build H (non-Hermitian via imaginary onsite) ---
-def eigsys(v, N_, t, B, Nl):
+def eigsys(X,Y,v, N_, t, B, Nl):
     H = np.zeros((Nl, Nl), dtype=np.complex128)
 
     for i, (x, y) in enumerate(zip(X, Y)):
