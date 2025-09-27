@@ -8,7 +8,7 @@ def run_block_for_task(task_id, total_tasks, B_vals, v_vals, cell_size, t, Nl):
             B = B_vals[task_id]
             iterable = ((B, v) for v in v_vals)
     for B, v in iterable:
-        rows.append(compute_percentage(B, v, cell_size, t, Nl, window=cell_size))
+        rows.append(compute_percentage(B, v, cell_size, t, Nl, cell_size))
     return rows
 
 def append_rows_atomic(path, rows, header="B v percentage"):
