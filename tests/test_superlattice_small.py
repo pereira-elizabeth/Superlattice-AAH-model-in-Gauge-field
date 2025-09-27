@@ -46,6 +46,8 @@ def test_run_block_for_task_returns_rows():
     # Single task partition (no SLURM)
     task_id = 0
     total_tasks = 1
+    
+    X, Y, custom_range, Nl = make_coordinates(Nt, cell_size, N_cells)
 
     rows = run_block_for_task(X,Y,task_id, total_tasks, B_vals, v_vals, cell_size, 1.0, Nl)
 
@@ -72,7 +74,10 @@ def test_append_rows_atomic_writes_all_rows(tmp_path=None):
 
     B_vals = np.array([0.005, 0.010])
     v_vals = np.array([0.0, 0.1])
-    rows = list(run_block_for_task(0, 1, B_vals, v_vals, cell_size, 1.0, Nl))
+    
+    X, Y, custom_range, Nl = make_coordinates(Nt, cell_size, N_cells)
+
+    rows = list(run_block_for_task(X, Y, 0, 1, B_vals, v_vals, cell_size, 1.0, Nl))
 
     # Temp output file under tests/temp
     if tmp_path is None:
