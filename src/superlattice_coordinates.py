@@ -1,4 +1,4 @@
-
+import numpy as np
 
 def make_coordinates(Nt, N_):
     custom_rangey = np.arange(start=1 - (N_ + 1) / 2, stop=(N_ - 1) / 2 + 0.01)
