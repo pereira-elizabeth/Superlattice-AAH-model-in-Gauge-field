@@ -18,7 +18,7 @@ def test_make_coordinates_tiny_grid():
     N_cells = 2                      # tiny, fast
     Nt = N_cells * (cell_size**2)    # must be consistent with your code
 
-    X, Y, custom_range, Nl = make_coordinates(Nt, cell_size)
+    X, Y, custom_range, Nl = make_coordinates(Nt, cell_size, N_cells)
 
     # Basic sanity checks
     assert isinstance(Nl, int) and Nl > 0
@@ -37,7 +37,7 @@ def test_run_block_for_task_returns_rows():
     Nt = N_cells * (cell_size**2)
 
     # We only need Nl for run_block_for_task; get it via the same helper the script uses.
-    _, _, _, Nl = make_coordinates(Nt, cell_size)
+    _, _, _, Nl = make_coordinates(Nt, cell_size, N_cells)
 
     # Tiny parameter sets
     B_vals = np.array([0.005, 0.010])
@@ -68,7 +68,7 @@ def test_append_rows_atomic_writes_all_rows(tmp_path=None):
     cell_size = 3
     N_cells = 2
     Nt = N_cells * (cell_size**2)
-    _, _, _, Nl = make_coordinates(Nt, cell_size)
+    _, _, _, Nl = make_coordinates(Nt, cell_size, N_cells)
 
     B_vals = np.array([0.005, 0.010])
     v_vals = np.array([0.0, 0.1])
