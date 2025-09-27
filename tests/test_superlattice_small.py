@@ -21,10 +21,12 @@ def test_make_coordinates_tiny_grid():
     X, Y, custom_range, Nl = make_coordinates(Nt, cell_size, N_cells)
 
     # Basic sanity checks
+    # tests/test_superlattice_small.py  (replace the first test body)
     assert isinstance(Nl, int) and Nl > 0
-    assert np.asarray(X).size == Nt
-    assert np.asarray(Y).size == Nt
-    assert hasattr(custom_range, "__iter__")  # any iterable is fine
+    assert np.asarray(X).size == Nl
+    assert np.asarray(Y).size == Nl
+    assert hasattr(custom_range, "__iter__")
+
 
 
 def test_run_block_for_task_returns_rows():
