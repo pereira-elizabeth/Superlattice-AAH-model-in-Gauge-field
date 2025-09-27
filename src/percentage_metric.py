@@ -11,7 +11,7 @@ def compute_percentage(X,Y,B, v, cell_size, t, Nl, window,lm):
     idx = np.argsort(w.real)
     w, VL, VR = w[idx], VL[:, idx], VR[:, idx]
 
-    VLp, VRp = newbiorth1(VL, VR)
+    VLp, VRp = newbiorth1(VL, VR,Nl)
 
     e_lo, e_hi = energy_window(window)
     mask = (w.real >= e_lo) & (w.real <= e_hi)
