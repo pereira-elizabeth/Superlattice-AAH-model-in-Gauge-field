@@ -2,6 +2,7 @@ import sys, pathlib, os, tempfile
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from src.hamiltonian_gauge import energy_window, phase_factor, orthomatrix, newbiorth1, ipr, eigsys
 from scipy import linalg as sla
+import numpy as np
 
 def compute_percentage(X,Y,B, v, cell_size, t, Nl, window,lm):
     H = eigsys(X,Y,v, cell_size, t, B, Nl,lm)
