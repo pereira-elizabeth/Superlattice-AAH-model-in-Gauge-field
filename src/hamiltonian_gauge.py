@@ -33,7 +33,7 @@ def ipr(vl1, vl2):
 
 # --- build H (non-Hermitian via imaginary onsite) ---
 def eigsys(X,Y,v, N_, t, B, Nl, lm):
-    extra_Sites = True
+    extra_sites = True
     H = np.zeros((Nl, Nl), dtype=np.complex128)
 
     for i, (x, y) in enumerate(zip(X, Y)):
