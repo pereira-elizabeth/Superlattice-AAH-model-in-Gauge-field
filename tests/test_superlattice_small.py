@@ -47,7 +47,7 @@ def test_run_block_for_task_returns_rows():
     task_id = 0
     total_tasks = 1
 
-    rows = run_block_for_task(task_id, total_tasks, B_vals, v_vals, cell_size, 1.0, Nl)
+    rows = run_block_for_task(X,Y,task_id, total_tasks, B_vals, v_vals, cell_size, 1.0, Nl)
 
     # rows should be an iterable of tuples/lists; each row should be length >= 3
     rows = list(rows)
