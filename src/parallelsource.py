@@ -1,3 +1,5 @@
+from src.percentage_metric import compute_percentage
+
 def run_block_for_task(task_id, total_tasks, B_vals, v_vals, cell_size, t, Nl):
     rows = []
     if total_tasks == 1:
