@@ -31,7 +31,7 @@ B_vals = np.linspace(0.0025, 0.025, 100)
 v_vals = np.linspace(0.0, 0.2,   100)
 
 # --- run & append ---
-rows = run_block_for_task(task_id, total_tasks, B_vals, v_vals, cell_size, t, Nl)
+rows = run_block_for_task(X,Y,task_id, total_tasks, B_vals, v_vals, cell_size, t, Nl)
 out_file = f"results/imag_even_parallel_array_ALL_{job_id}.dat"
 append_rows_atomic(out_file, rows)
 print(f"Task {task_id}: appended {len(rows)} rows to {out_file}")
