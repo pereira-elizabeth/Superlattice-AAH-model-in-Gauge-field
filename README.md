@@ -1,4 +1,11 @@
 # Superlattice AAH — Non-Hermitian $(B_{micro}\times v_{I}/\gamma)$ Grid 
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Last Commit](https://img.shields.io/github/last-commit/pereira-elizabeth/nonhermitian-superlattice)
+![Code Size](https://img.shields.io/github/languages/code-size/pereira-elizabeth/nonhermitian-superlattice)
+<!-- CI badge (works after you add .github/workflows/tests.yml) -->
+<!-- ![Build](https://github.com/pereira-elizabeth/nonhermitian-superlattice/actions/workflows/tests.yml/badge.svg) -->
+
 
 This repository contains a **non-Hermitian superlattice Aubry–André–Harper (AAH) model** implemented on a 1D multimodal chain.  
 It demonstrates Hamiltonian construction, non-Hermitian diagonalization, and HPC-scale parameter sweeps.
