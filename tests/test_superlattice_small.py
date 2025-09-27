@@ -90,15 +90,11 @@ def test_append_rows_atomic_writes_all_rows(tmp_path=None):
 
     # First append
     append_rows_atomic(out_file, rows)
+    append_rows_atomic(out_file, rows)   # add this back
 
     with open(out_file, "r") as f:
         lines = [ln for ln in f.read().splitlines() if ln.strip()]
 
-    # Separate optional header
-    header = 0
-    if lines and lines[0].lower().startswith(("b v", "b\tv")):
-        header = 1
-
+    header = 1 if lines and lines[0].strip().lower().startswith("b v percentage") else 0
     data_lines = lines[header:]
     assert len(data_lines) == 2 * len(rows)
-
