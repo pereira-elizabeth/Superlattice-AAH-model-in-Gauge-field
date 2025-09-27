@@ -48,6 +48,12 @@ As the gauge field $B_{micro}$ increases, orbital mixing shifts the **localizati
 
 
 ---
+## Tests
+Run the test suite:
+
+```bash
+pytest -q
+```
 
 ## 🚀 How to Run
 
