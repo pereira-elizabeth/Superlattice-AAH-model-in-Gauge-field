@@ -17,8 +17,9 @@ job_id = os.environ.get("SLURM_JOB_ID", "local")
 W = 3 # the width parameter
 cell_size = W       # 3 or 4
 extra_sites = True
-N_cells = 50
+N_cells = 50    #number of cells
 Nt = N_cells * (cell_size**2)
+#Hamiltonian parameters
 v = 0.2
 delta = 0.4 * np.pi
 alpha = (np.sqrt(5.0) - 1.0) / 2.0
