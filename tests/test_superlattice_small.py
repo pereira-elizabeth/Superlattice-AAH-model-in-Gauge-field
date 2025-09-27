@@ -14,7 +14,8 @@ from src.percentage_metric import compute_percentage
 
 def test_make_coordinates_tiny_grid():
     """Coordinates function returns expected shapes for a tiny system."""
-    cell_size = 3
+    W = 3
+    cell_size = W
     N_cells = 2                      # tiny, fast
     Nt = N_cells * (cell_size**2)    # must be consistent with your code
 
@@ -34,7 +35,8 @@ def test_run_block_for_task_returns_rows():
     run_block_for_task should accept small grids and return rows like [B, v, percentage].
     We keep the grid very small so CI stays fast.
     """
-    cell_size = 3
+    W = 3
+    cell_size = W
     N_cells = 2
     Nt = N_cells * (cell_size**2)
 
@@ -69,8 +71,9 @@ def test_append_rows_atomic_writes_all_rows(tmp_path=None):
     append_rows_atomic should create/append lines atomically.
     We write a few rows to a temp file and confirm line count matches.
     """
-    cell_size = 3
-    N_cells = 2
+    W = 3 
+    cell_size = W
+    N_cells = 2 #number of cells
     Nt = N_cells * (cell_size**2)
     _, _, _, Nl = make_coordinates(Nt, cell_size, N_cells)
 
