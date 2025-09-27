@@ -2,7 +2,7 @@ import sys, pathlib, os, tempfile
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from src.percentage_metric import compute_percentage
 
-def run_block_for_task(task_id, total_tasks, B_vals, v_vals, cell_size, t, Nl):
+def run_block_for_task(X,Y, task_id, total_tasks, B_vals, v_vals, cell_size, t, Nl):
     rows = []
     if total_tasks == 1:
         iterable = ((B, v) for B in B_vals for v in v_vals)
@@ -12,7 +12,7 @@ def run_block_for_task(task_id, total_tasks, B_vals, v_vals, cell_size, t, Nl):
             B = B_vals[task_id]
             iterable = ((B, v) for v in v_vals)
     for B, v in iterable:
-        rows.append(compute_percentage(B, v, cell_size, t, Nl, cell_size))
+        rows.append(compute_percentage(X,Y,B, v, cell_size, t, Nl, cell_size))
     return rows
 
 def append_rows_atomic(path, rows, header="B v percentage"):
