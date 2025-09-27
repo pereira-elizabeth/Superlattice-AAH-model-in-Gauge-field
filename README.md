@@ -18,7 +18,7 @@ It demonstrates Hamiltonian construction, non-Hermitian diagonalization, and HPC
 - **Parallel computation on HPC (SLURM)**  
   - Sweeps a $(B_{micro}, v_{I}/\gamma)$ parameter grid, where $B_{micro}$ is the strength of synthetic Gauge field and $v_{I}/\gamma$ is the strength of onsite loss.  
   - Each job array element solves a subset of parameters in parallel  
-  - Results are written to `results/imag_even_parallel_array_ALL_{job_id}.dat` with rows `($B_{micro}, v_{I}/\gamma$, percentage of states that have IPR $>12/$ system size )`
+  - Results are written to `results/imag_even_parallel_array_ALL_{job_id}.dat` with rows ($B_{micro}, v_{I}/\gamma$, percentage of states that have IPR $>12/$ system size )
 
 ---
 
