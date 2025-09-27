@@ -1,3 +1,5 @@
+from src.hamiltonian_gauge import energy_window, phase_factor, orthomatrix, newbiorth1, ipr, eigsys
+
 def compute_percentage(B, v, cell_size, t, Nl, window):
     H = eigsys(X,Y,v, cell_size, t, B, Nl)
     # non-Hermitian eigensystem
