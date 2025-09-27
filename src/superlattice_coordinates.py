@@ -38,5 +38,3 @@ def make_coordinates(Nt, N_):
     Nl = len(Y)
     return X, Y, custom_rangey, Nl
 
-X, Y, custom_range, Nl = make_coordinates(Nt, cell_size)
-
