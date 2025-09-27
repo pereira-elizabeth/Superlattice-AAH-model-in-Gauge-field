@@ -35,6 +35,8 @@ def ipr(vl1, vl2):
 def eigsys(X,Y,v, N_, t, B, Nl, lm):
     extra_sites = True
     cell_size = N_
+    delta = 0.4 * np.pi
+    alpha = (np.sqrt(5.0) - 1.0) / 2.0
     H = np.zeros((Nl, Nl), dtype=np.complex128)
 
     for i, (x, y) in enumerate(zip(X, Y)):
