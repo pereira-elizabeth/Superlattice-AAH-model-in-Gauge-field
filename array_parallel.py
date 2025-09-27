@@ -5,7 +5,7 @@ import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))  # add repo root to sys.path
 from src.hamiltonian_gauge import energy_window, phase_factor, orthomatrix, newbiorth1, ipr, eigsys
 from src.superlattice_coordinates import make_coordinates
-from src.percentage_matric import compute_percentage
+from src.percentage_metric import compute_percentage
 from src.parallelsource import append_rows_atomic, run_block_for_task
 
 # --- CLI / SLURM ---
