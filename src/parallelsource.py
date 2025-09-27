@@ -1,6 +1,7 @@
 import sys, pathlib, os, tempfile
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from src.percentage_metric import compute_percentage
+import numpy as np
 
 def run_block_for_task(X,Y, task_id, total_tasks, B_vals, v_vals, cell_size, t, Nl,lm):
     rows = []
