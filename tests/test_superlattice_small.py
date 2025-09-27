@@ -8,8 +8,8 @@ from src.superlattice_coordinates import make_coordinates
 from src.parallelsource import run_block_for_task, append_rows_atomic
 
 # If your module name is different, fix these imports accordingly:
-# from src.hamiltonian_gauge import eigsys, ipr, newbiorth1, energy_window, phase_factor, orthomatrix
-# from src.percentage_matric import compute_percentage
+from src.hamiltonian_gauge import eigsys, ipr, newbiorth1, energy_window, phase_factor, orthomatrix
+from src.percentage_matric import compute_percentage
 
 
 def test_make_coordinates_tiny_grid():
