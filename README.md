@@ -5,7 +5,7 @@
 ![Code Size](https://img.shields.io/github/languages/code-size/pereira-elizabeth/nonhermitian-superlattice)
 <!-- CI badge (works after you add .github/workflows/tests.yml) -->
 <!-- ![Build](https://github.com/pereira-elizabeth/nonhermitian-superlattice/actions/workflows/tests.yml/badge.svg) -->
-
+A large-scale simulation of exotic materials where energy isn’t perfectly conserved — run efficiently on supercomputers.
 
 This repository contains a **non-Hermitian superlattice Aubry–André–Harper (AAH) model** implemented on a 1D multimodal chain.  
 It demonstrates Hamiltonian construction, non-Hermitian diagonalization, and HPC-scale parameter sweeps.
