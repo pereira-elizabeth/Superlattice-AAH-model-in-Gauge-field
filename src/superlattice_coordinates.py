@@ -1,6 +1,6 @@
 import numpy as np
 
-def make_coordinates(Nt, N_):
+def make_coordinates(Nt, N_, extra_sites = True):
     custom_rangey = np.arange(start=1 - (N_ + 1) / 2, stop=(N_ - 1) / 2 + 0.01)
     if extra_sites:
         if N_ % 2 != 0:
