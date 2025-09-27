@@ -1,4 +1,4 @@
-def compute_percentage(B, v, cell_size, t, Nl, cell_size):
+def compute_percentage(B, v, cell_size, t, Nl, window):
     H = eigsys(X,Y,v, cell_size, t, B, Nl)
     # non-Hermitian eigensystem
     w, VL, VR = sla.eig(H, left=True, right=True)
