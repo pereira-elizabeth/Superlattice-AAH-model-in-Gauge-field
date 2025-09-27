@@ -1,5 +1,13 @@
 import numpy as np
 from scipy import linalg as sla
+
+def energy_window(sel):
+    if isinstance(sel, (tuple, list)) and len(sel) == 2:
+        lo, hi = float(sel[0]), float(sel[1]); return lo, hi
+    if sel in ("3x3", 3): return -2.0, -1.0
+    if sel in ("4x4", 4): return -3.0, -2.0
+    return -3.0, -2.0
+
 # --- phases / algebra helpers ---
 def phase_factor(x1, y1, x2, y2, B):
     return np.exp(-1j * 2.0 * np.pi * B * (x2 - x1) * ((y1 + y2) / 2.0))
